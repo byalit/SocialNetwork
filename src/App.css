@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+.app-wrapper {
+  display: grid;
+
+grid-template-areas: 
+"headClass headClass"
+"navClass contentClass";
+
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+}
+.header {
+ grid-area: headClass;
+ background-color: bisque;
+}
+.header img {
+  width: 50px;
+}
+.nav  {
+ grid-area: navClass;
+ background-color: beige;
+}
+.content {
+ grid-area: contentClass;
+ background-color: #61dafb;
+}
+.content img {
+  width: 120px;
+}
