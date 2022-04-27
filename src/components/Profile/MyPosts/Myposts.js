@@ -6,11 +6,14 @@ const Myposts = () => {
   return (
     <div>
       Posts
-      <div>New posts</div>
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+        <div>
+        <textarea></textarea>
+        <button>Add post</button>
+        </div>
+        <div className={p.posts}>
+      <Post message = 'Hi, how are you' />
+      <Post message = 'Its my first post' />
+    </div>
     </div>
   );
 };
