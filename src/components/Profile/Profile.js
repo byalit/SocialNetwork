@@ -4,7 +4,7 @@ import Myposts from "./MyPosts/Myposts";
 
 const Profile = () => {
   return (
-    <div className={p.content}>
+    <div>
       <div>
         <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.hdnicewallpapers.com%2FWalls%2FBig%2FVehicles%2FCycle_in_Farm_HD_Image.jpg&f=1&nofb=1"></img>
       </div>
