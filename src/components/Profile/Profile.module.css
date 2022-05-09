@@ -4,5 +4,9 @@
 }
 
 .content img {
+    width: 20px;
+}
+
+img {
     width: 120px;
 }
