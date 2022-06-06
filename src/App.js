@@ -8,7 +8,6 @@ import Music from "./components/Music/music";
 import News from "./components/News/news";
 import Photo from "./components/Photo/photo";
 import React from "react";
-import { addPost } from "./components/redux/state";
 
 const App = (props) => {
   return (
@@ -26,7 +25,10 @@ const App = (props) => {
             <Route
               path="/profile"
               element={
-                <Profile state={props.state.profilePage} addPost={addPost} />
+                <Profile
+                  state={props.state.profilePage}
+                  dispatch={props.dispatch}
+                />
               }
             />
             <Route path="/music" element={<Music />} />

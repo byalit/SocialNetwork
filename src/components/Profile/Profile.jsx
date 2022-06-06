@@ -1,5 +1,4 @@
 import React from "react";
-import p from "./Profile.module.css";
 import Myposts from "./MyPosts/Myposts";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
@@ -8,7 +7,7 @@ const Profile = (props) => {
         <div>
             <ProfileInfo/>
 
-            <Myposts posts ={props.state.posts} addPost={props.addPost} />
+            <Myposts posts ={props.state.posts}  newPostText={props.state.newPostText} dispatch={props.dispatch} />
 
         </div>
     );
