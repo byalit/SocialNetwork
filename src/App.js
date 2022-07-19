@@ -8,6 +8,7 @@ import Music from "./components/Music/music";
 import News from "./components/News/news";
 import Photo from "./components/Photo/photo";
 import React from "react";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
 
 const App = (props) => {
   return (
@@ -20,15 +21,12 @@ const App = (props) => {
           <Routes>
             <Route
               path="/dialogs/*"
-              element={<Dialogs state={props.state.dialogsPage} />}
+              element={<DialogsContainer/>}
             />
             <Route
               path="/profile"
               element={
-                <Profile
-                  state={props.state.profilePage}
-                  dispatch={props.dispatch}
-                />
+                <Profile/>
               }
             />
             <Route path="/music" element={<Music />} />
