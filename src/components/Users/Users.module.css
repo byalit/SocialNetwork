@@ -1,0 +1,14 @@
+.header {
+    grid-area: headClass;
+    background-color: bisque;
+}
+.header img {
+    width: 50px;
+}
+.imgAv {
+    width: 150px;
+    height: 100px;
+}
+.selectedPage {
+    font-weight: bold;
+}
