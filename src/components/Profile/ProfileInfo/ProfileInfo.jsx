@@ -1,6 +1,7 @@
 import React from "react";
 import p from "./ProfileInfo.module.css";
 import Preloader from "../../common/preloader/preloader";
+import ProfileStatus from "./ProfileStatus"
 
 
 const ProfileInfo = (props) => {
@@ -17,9 +18,11 @@ const ProfileInfo = (props) => {
                 <img
                     src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpngimg.com%2Fuploads%2Fduck%2Fduck_PNG5036.png&f=1&nofb=1"></img>
             </div>
-            <div className='p.descriptionBlock'>
+            <div className={p.descriptionBlock}>
                 <img src={props.profile.photos.large} alt=""/>
-                ava + discription</div>
+
+                <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+            </div>
 
         </div>
     );
