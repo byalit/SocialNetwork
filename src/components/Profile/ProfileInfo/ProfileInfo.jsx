@@ -1,30 +1,21 @@
 import React from "react";
 import p from "./ProfileInfo.module.css";
 import Preloader from "../../common/preloader/preloader";
-import ProfileStatus from "./ProfileStatus"
 import ProfileStatusH from "./ProfileStatusH";
 
 
-const ProfileInfo = (props) => {
-    if(!props.profile){
+const ProfileInfo = ({profile, status,updateStatus}) => {
+    if(!profile){
         return <Preloader/>
     }
     return (
         <div>
-            <div>
-                <img
-                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.hdnicewallpapers.com%2FWalls%2FBig%2FVehicles%2FCycle_in_Farm_HD_Image.jpg&f=1&nofb=1"></img>
-            </div>
-            <div>
-                <img
-                    src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpngimg.com%2Fuploads%2Fduck%2Fduck_PNG5036.png&f=1&nofb=1"></img>
-            </div>
             <div className={p.descriptionBlock}>
-                <img src={props.profile.photos.large} alt=""/>
-                <p>{props.profile.aboutMe}</p>
-                <p>{props.profile.fullName}</p>
+                <img src={profile.photos.large} alt=""/>
+                <p>{profile.aboutMe}</p>
+                <p>{profile.fullName}</p>
 
-                <ProfileStatusH status={props.status} updateStatus={props.updateStatus}/>
+                <ProfileStatusH status={status} updateStatus={updateStatus}/>
             </div>
 
         </div>

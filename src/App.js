@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import {BrowserRouter, Route, Routes, withRouter} from "react-router-dom";
+import {Route, Routes} from "react-router-dom";
 import Music from "./components/Music/music";
 import News from "./components/News/news";
 import Photo from "./components/Photo/photo";
