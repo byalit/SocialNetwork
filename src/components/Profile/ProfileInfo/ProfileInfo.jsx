@@ -2,6 +2,7 @@ import React from "react";
 import p from "./ProfileInfo.module.css";
 import Preloader from "../../common/preloader/preloader";
 import ProfileStatus from "./ProfileStatus"
+import ProfileStatusH from "./ProfileStatusH";
 
 
 const ProfileInfo = (props) => {
@@ -20,8 +21,10 @@ const ProfileInfo = (props) => {
             </div>
             <div className={p.descriptionBlock}>
                 <img src={props.profile.photos.large} alt=""/>
+                <p>{props.profile.aboutMe}</p>
+                <p>{props.profile.fullName}</p>
 
-                <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
+                <ProfileStatusH status={props.status} updateStatus={props.updateStatus}/>
             </div>
 
         </div>
