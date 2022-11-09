@@ -4,15 +4,17 @@ import {Route, Routes} from "react-router-dom";
 import Music from "./components/Music/music";
 import News from "./components/News/news";
 import Photo from "./components/Photo/photo";
-import React from "react";
-import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import React, {Suspense, lazy} from "react";
 import UsersContainer from "./components/Users/UsersContainer";
-import ProfileContainer from "./components/Profile/ProfileContainer";
+
 import HeaderContainer from "./components/Header/HeaderContainer";
 import LoginPage from "./components/Login/Login";
 import {connect} from "react-redux";
 import {initializeApp} from "./components/redux/appReducer";
 import Preloader from "./components/common/preloader/preloader";
+const DialogsContainer = lazy(()=>import("./components/Dialogs/DialogsContainer"))
+const ProfileContainer = lazy(()=>import("./components/Profile/ProfileContainer"))
+
 
 class App extends React.Component {
   componentDidMount() {
@@ -29,6 +31,7 @@ class App extends React.Component {
                       <Navbar/>
 
                       <div className="app-wrapper-content">
+                          <Suspense fallback={<Preloader />}>
                           <Routes>
                               <Route
                                   path="/dialogs/*"
@@ -48,6 +51,7 @@ class App extends React.Component {
                               <Route path="/news" element={<News/>}/>
                               <Route path="/photo" element={<Photo/>}/>
                           </Routes>
+                          </Suspense>
                       </div>
                   </div>
               </>

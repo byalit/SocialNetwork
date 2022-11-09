@@ -5,7 +5,7 @@ import User from "./User";
 let Users = ({currentPage,onPageChanged,totalUsersCount,pageSize,users, ...props
 }) => {
     return <div>
-        <Paginator currentPage={currentPage} onPageChanged={onPageChanged} totalUsersCount={totalUsersCount} pageSize={pageSize}/>
+        <Paginator currentPage={currentPage} onPageChanged={onPageChanged} totalItemsCount={totalUsersCount} pageSize={pageSize}/>
         {
             users.map(u => <User user={u} followingInProgress={props.followingInProgress} follow={props.follow} unfollow={props.unfollow} key={u.id}/> )}
     </div>
