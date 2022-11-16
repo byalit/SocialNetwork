@@ -6,7 +6,6 @@ import News from "./components/News/news";
 import Photo from "./components/Photo/photo";
 import React, {Suspense, lazy} from "react";
 import UsersContainer from "./components/Users/UsersContainer";
-
 import HeaderContainer from "./components/Header/HeaderContainer";
 import LoginPage from "./components/Login/Login";
 import {connect} from "react-redux";

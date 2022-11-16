@@ -6,23 +6,23 @@ const Navbar = () => {
     return (
         <nav className={n.nav}>
             <div className={n.item}>
-                <NavLink to="/profile" activeclassname={n.activeLink}>Profile</NavLink>
+                <NavLink to="/profile" className={(navigationData) => navigationData.isActive ? n.activeLink : "" }>Profile</NavLink>
             </div><div className={n.item}>
-                <NavLink to="/users" activeclassname={n.activeLink}>Users</NavLink>
+                <NavLink to="/users" className={(navigationData) => navigationData.isActive ? n.activeLink : "" }>Users</NavLink>
             </div>
             <div className={n.item}>
-                <NavLink to="/dialogs" activeclassname={n.activeLink}>Messages</NavLink>
-            </div>
-            <div className={n.item}>
-
-                <NavLink to="/photo" activeclassname={n.activeLink}>Photo</NavLink>
+                <NavLink to="/dialogs" className={(navigationData) => navigationData.isActive ? n.activeLink : "" }>Messages</NavLink>
             </div>
             <div className={n.item}>
 
-                <NavLink to="/music" activeclassname={n.activeLink}>Music</NavLink>
+                <NavLink to="/photo" className={(navigationData) => navigationData.isActive ? n.activeLink : "" }>Photo</NavLink>
             </div>
             <div className={n.item}>
-                <NavLink to="/news" activeclassname={n.activeLink}>News</NavLink>
+
+                <NavLink to="/music" className={(navigationData) => navigationData.isActive ? n.activeLink : "" }>Music</NavLink>
+            </div>
+            <div className={n.item}>
+                <NavLink to="/news" className={(navigationData) => navigationData.isActive ? n.activeLink : "" }>News</NavLink>
             </div>
         </nav>
     );
