@@ -1,6 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
-import {Route, Routes} from "react-router-dom";
+import {Route, Routes, Navigate} from "react-router-dom";
 import Music from "./components/Music/music";
 import News from "./components/News/news";
 import Photo from "./components/Photo/photo";
@@ -31,7 +31,9 @@ class App extends React.Component {
 
                       <div className="app-wrapper-content">
                           <Suspense fallback={<Preloader />}>
+
                           <Routes>
+                              <Route path="/" element={<Navigate to="/profile" />} />
                               <Route
                                   path="/dialogs/*"
                                   element={<DialogsContainer/>}
@@ -49,6 +51,7 @@ class App extends React.Component {
                               <Route path="/music" element={<Music/>}/>
                               <Route path="/news" element={<News/>}/>
                               <Route path="/photo" element={<Photo/>}/>
+                              <Route path="*" element={<div>404 not found</div>}/>
                           </Routes>
                           </Suspense>
                       </div>

@@ -16,6 +16,8 @@ let initialState = {
         {id: 1, message: "Nien!"},
     ]
 }
+
+//    "redux-form": "^8.3.8",
 const dialogsReducer = (state = initialState, action) => {
 
     switch (action.type) {
