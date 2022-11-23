@@ -1,3 +1,8 @@
+$white: #c9e4ca;
+$grey: #282d28;
+$green: #55828b;
+$dark: #3b6064;
+$darker: #364958;
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,10 +16,10 @@ html {
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Malgun Gothic", sans-serif;
   font-size: 1.6rem;
-  color: white;
-  background-color: none;
+  color: $dark;
+  background-color: transparent;
 }
 
 .App {
@@ -33,8 +38,7 @@ body {
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: $green;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,16 +49,6 @@ body {
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .app-wrapper {
@@ -69,8 +63,8 @@ body {
 }
 
 .app-wrapper-content {
-
+  min-height: 100vh;
   grid-area: contentClass;
-  background-color: #61dafb;
+  background-color: $green;
 
 }

@@ -1,3 +1,10 @@
 .item {
-    color: greenyellow;
+    margin:10px;
+padding: 5px;
+    width: 50%;
+    height: 50%;
+    border: solid 1px black;
+    border-radius: 12px;
+    background-color: #c9e4ca;
+    color: #30638e;
 }

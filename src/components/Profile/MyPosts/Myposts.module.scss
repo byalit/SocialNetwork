@@ -1,0 +1,21 @@
+$white: #c9e4ca;
+$grey: #87bba2;
+$green: #55828b;
+$dark: #3b6064;
+$darker: #364958;
+.item {
+    color: greenyellow;
+}
+.postsBlock {
+    padding: 10px;
+}
+.posts {
+    margin-top: 10px;
+}
+textarea {
+    width: 30vh;
+    height: 15vh;
+    border: 1px solid transparent;
+    background-color: $white;
+    resize: none;
+}

@@ -1,7 +1,13 @@
+$white: #c9e4ca;
+$grey: #87bba2;
+$green: #55828b;
+$dark: #3b6064;
+$darker: #364958;
 .nav {
     grid-area: navClass;
+    min-height: 100vh;
     font-family: Cinzel;
-    background-color: rgb(212, 212, 69);
+    background-color: $dark;
     padding: 20px;
 }
 
